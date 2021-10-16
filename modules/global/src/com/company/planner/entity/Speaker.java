@@ -5,11 +5,14 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
-@Table(name = "PLANNER_SPEAKER")
+@Table(name = "PLANNER_SPEAKER", indexes = {
+        @Index(name = "IDX_PLANNER_SPEAKER_LAST_NAME", columnList = "LAST_NAME")
+})
 @Entity(name = "planner_Speaker")
 @NamePattern("%s %s|firstName,lastName")
 public class Speaker extends StandardEntity {
