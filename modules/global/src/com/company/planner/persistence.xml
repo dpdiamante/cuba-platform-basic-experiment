@@ -3,5 +3,6 @@
     <persistence-unit name="planner" transaction-type="RESOURCE_LOCAL">
 
         <class>com.company.planner.entity.Speaker</class>
+        <class>com.company.planner.entity.Session</class>
     </persistence-unit>
 </persistence>
